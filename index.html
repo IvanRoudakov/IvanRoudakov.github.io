@@ -9,7 +9,7 @@
     const searchString = window.location.search;
     const urlParams = new URLSearchParams(searchString);
 
-    $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-bot-forse-push?id=" + urlParams.get('id'), ()=>{
+    $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-bot-forse-push?id=" + urlParams.get('user_id'), ()=>{
       alert("success")
     })
   }
