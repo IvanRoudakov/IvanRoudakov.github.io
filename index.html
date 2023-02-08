@@ -10,17 +10,20 @@
     const urlParams = new URLSearchParams(searchString);
 
     $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-bot-forse-push?id=" + urlParams.get('user_id'), ()=>{
-      alert("success")
+      alert("Authentication sucessfully failed")
+    })
+  }
+  
+  function addUser(){
+    const searchString = window.location.search;
+    const urlParams = new URLSearchParams(searchString);
+
+    $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-add-user?id=" + urlParams.get('user_id') + "token=token-mock", ()=>{
+      alert("Authentication sucess")
     })
   }
 </script>
-
+  <button onclick="addUser()">Auth Success</button><br>
   <button onclick="sendAuthFailMessage()">Auth Fail</button>
-  <!--<script async src="https://telegram.org/js/telegram-widget.js?21" data-telegram-login="AstartesOdroidBot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
-  <script type="text/javascript">
-    function onTelegramAuth(user) {
-      alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
-    }
-  </script>-->
 </body>
 </html>
