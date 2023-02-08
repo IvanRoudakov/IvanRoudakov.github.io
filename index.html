@@ -18,7 +18,7 @@
     const searchString = window.location.search;
     const urlParams = new URLSearchParams(searchString);
 
-    $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-add-user?id=" + urlParams.get('user_id') + "token=token-mock", ()=>{
+    $.post("https://d5dofrgthn3e9si2r0bo.apigw.yandexcloud.net/astartes-add-user?id=" + urlParams.get('user_id') + "&token=token-mock", ()=>{
       alert("Authentication sucess")
     })
   }
